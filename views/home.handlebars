@@ -8,13 +8,14 @@
         </tr>
         </thead>
         <tbody>
+        {{#if data}}
         {{#each data}}
             <tr>
                 <td>
                     <img src={{this.img}} alt={{this.name}} style="width: 150px; height: auto">
                 </td>
                 <td>
-                    <a>{{this.name}}</a>
+                    <a href="product/{{this.id}}">{{this.name}}</a>
                     <p>{{this.description}}</p>
                 </td>
                 <td>
@@ -23,6 +24,7 @@
                 </td>
             </tr>
         {{/each}}
+        {{/if}}
         </tbody>
     </table>
 </div>

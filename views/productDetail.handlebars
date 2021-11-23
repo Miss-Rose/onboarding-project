@@ -1,0 +1,21 @@
+<div class="grid-container">
+    <div class="grid-x grid-margin-x">
+        <div class="cell auto">
+            <img src={{this.img}} alt={{this.name}} style="width: 100%; height: 100%">
+        </div>
+        <div class="cell medium-6 large-9">
+            <div class="grid-x align-justify">
+                <div class="column small-4">
+                    <h2 >{{this.name}}</h2>
+                </div>
+                <div class="column small-4 text-right fcr">
+                    <span>{{this.price.value}}</span>
+                    <span>{{this.price.currency}}</span>
+                </div>
+            </div>
+            <hr>
+            <p>{{this.description}}</p>
+            <button type="button" class="button radius bordered shadow primary">Add to Cart</button>
+        </div>
+    </div>
+</div>
