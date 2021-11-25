@@ -9,8 +9,9 @@ app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 app.set("views", "./views");
 
-app.use(express.static('styles'));
+app.use(express.static('app/styles'));
 app.use(express.static( 'public'));
+app.use(express.static( 'app/images'));
 
 app.get('/', async (req, res) => {
     const response = await fetch('http://demo7391349.mockable.io/products');

@@ -4,7 +4,7 @@ import { ZoomerView } from "./views/ZoomerView";
 document.addEventListener('DOMContentLoaded', () => {
     const app = new App();
     app.addRegions({
-        zoomer: '#zoomer-view',
+        zoomer: '#zoomImages',
     });
     app.on('start', function() {
         Backbone.history.start();
