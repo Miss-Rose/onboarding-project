@@ -25,6 +25,14 @@ a:hover,a:active {
 .bcg, bg-color-gray { background-color: #e6e6e6; }
 .mb10, margin-bottom-10 { margin-bottom:10px; }
 
+.full-image {
+    width: 100%;
+    height: 100%
+}
 
+.zoom-out {
+    width: 50%;
+    height: 50%
+}
 
 

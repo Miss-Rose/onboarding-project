@@ -1,6 +1,7 @@
 const express = require('express');
 const engine = require('express-handlebars');
 const fetch = require('node-fetch');
+const path = require('path');
 const app = express();
 const port = 3001;
 
@@ -9,6 +10,7 @@ app.set('view engine', 'handlebars');
 app.set("views", "./views");
 
 app.use(express.static('styles'));
+app.use(express.static( 'public'));
 
 app.get('/', async (req, res) => {
     const response = await fetch('http://demo7391349.mockable.io/products');
