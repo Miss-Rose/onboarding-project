@@ -7,9 +7,7 @@ const path = require('path');
 const merge = require('webpack-merge');
 
 const webpackCommon = {
-    entry: {
-        app: ['./initialize']
-    },
+    entry: './app/index.js',
     module: {
         loaders: [
             {
