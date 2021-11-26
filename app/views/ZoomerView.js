@@ -17,8 +17,6 @@ export const ZoomerView = Marionette.ItemView.extend({
     onImageClick: function (e) {
         e.preventDefault();
         const element = e.target;
-        console.log('currentTarget', element);
-        console.log('this.el', this.el);
         element.style.opacity = 0;
         this.el.style.backgroundImage = `url(${element.src})`;
         this.el.style.backgroundSize = '200%';
