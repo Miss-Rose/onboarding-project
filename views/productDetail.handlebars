@@ -1,8 +1,8 @@
 <div class="grid-container">
     <div class="grid-x grid-margin-x" id="pdp">
         <div class="cell auto image-container">
-            <div id="zoomView">
-                <img id="zoomImage" class="full-image" src={{this.img}} alt={{this.name}}>
+            <div id="zoomImage" data-src={{this.img}}>
+                {{!-- <img id="zoomImage" class="full-image" src={{this.img}} alt={{this.name}}> --}}
             </div>
             <img class="zoom-icon" src="http://localhost:3001/zoom.svg" alt="image">
         </div>
