@@ -1,8 +1,9 @@
 import Marionette from 'backbone.marionette';
+import template from './templates/counterView.hbs';
 
 export const ButtonView = Marionette.ItemView.extend({
-  el: '#buttonView',
-  template: '#buttonTemplate',
+  // el: '#buttonView',
+  template,
   ui: {
     button: '#counterButton'
   },

@@ -4,8 +4,7 @@ import Marionette from 'backbone.marionette';
 // import { ButtonView } from './views/ButtonView';
 // import { CounterView } from './views/CounterView';
 
-
-export const App = Marionette.Application.extend();
+ const App = Marionette.Application.extend();
   // regions: {
   //   zoomer: '#zoomImage',
   //   addButton: '#counterButton',

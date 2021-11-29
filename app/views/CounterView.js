@@ -8,7 +8,7 @@ export const CounterView = Marionette.ItemView.extend({
     counter: '#counterItem'
   },
   events: {
-    'change @ui.counter': 'onCounterChange',
+    'click @ui.counter': 'onCounterChange',
   },
   modelEvents: {
     'change': 'render',
