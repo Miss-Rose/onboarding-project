@@ -11,7 +11,7 @@ export const App = Marionette.Application.extend({
     addButton: '#counterButton',
     cartItem: '#counterItem'
   },
-  onStart() {
+  initialize () {
     this.showChildView('zoomer', new ZoomerView());
     this.showChildView('addButton', new ButtonView());
     this.showChildView('cartItem', new CounterView());
