@@ -1,8 +1,10 @@
 import Marionette from 'backbone.marionette';
-import template from './templates/counterView.hbs';
+import template from './templates/buttonView.hbs';
+import Radio from "backbone.radio/build/backbone.radio";
+
+const myChannel = Radio.channel('card');
 
 export const ButtonView = Marionette.ItemView.extend({
-  // el: '#buttonView',
   template,
   ui: {
     button: '#counterButton'
@@ -15,6 +17,11 @@ export const ButtonView = Marionette.ItemView.extend({
   },
   onButtonClick: function(e) {
     e.preventDefault();
-    console.log('on btn click');
+    let count = JSON.parse(window.localStorage.getItem('count') ? window.localStorage.getItem('count') : '[]');
+    const id = `${window.location.href}`.split('/');
+    count.push(id[id.length-1]);
+    window.localStorage.setItem('count', JSON.stringify(count));
+    const products = JSON.parse(window.localStorage.getItem('count')).length;
+    myChannel.trigger('save', products);
   },
 });

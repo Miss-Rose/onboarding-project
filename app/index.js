@@ -1,20 +1,14 @@
-// import Radio from 'backbone.radio/build/backbone.radio';
 import {ZoomerView} from "./views/ZoomerView";
 import {ButtonView} from "./views/ButtonView";
 import {CounterView} from "./views/CounterView";
-import Marionette from "backbone.marionette";
-
-// const cartChannel = Radio.channel('cart');
-// cartChannel.on('', function() {
-// });
- const App = Marionette.Application.extend();
+import {App} from "./app";
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = new App();
   app.addRegions({
     zoomer: '#zoomImage',
     addButton: '#buttonView',
-    cartItem: '#counterItem'
+    cartItem: '#counterView',
   });
 
   app.on('start', function() {

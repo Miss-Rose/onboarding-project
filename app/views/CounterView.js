@@ -1,21 +1,15 @@
 import Marionette from 'backbone.marionette';
-import {counter} from '../models/CounterModel';
+import template from './templates/counterView.hbs';
+import counter from "../models/CounterModel";
 
 export const CounterView = Marionette.ItemView.extend({
-  el: '#counterView',
-  template: '#counterTemplate',
+  el: '#counterItem',
+  template,
   ui: {
     counter: '#counterItem'
-  },
-  events: {
-    'click @ui.counter': 'onCounterChange',
   },
   modelEvents: {
     'change': 'render',
   },
   model: counter,
-  onCounterChange: function(e) {
-    e.preventDefault();
-    console.log('on counter change');
-  },
 });
