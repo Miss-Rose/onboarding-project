@@ -1,5 +1,5 @@
 import Backbone from 'backbone';
-import Radio from "backbone.radio/build/backbone.radio";
+import Radio from 'backbone.radio/build/backbone.radio';
 
 const myChannel = Radio.channel('card');
 const store = window.localStorage.getItem('count') ?

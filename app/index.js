@@ -1,9 +1,8 @@
-import {ZoomerView} from "./views/ZoomerView";
-import {ButtonView} from "./views/ButtonView";
-import {CounterView} from "./views/CounterView";
-import {App} from "./app";
-import CounterModel from "./models/CounterModel";
-import counter from "./models/CounterModel";
+import Backbone from 'backbone';
+import {ZoomerView} from './views/ZoomerView';
+import {ButtonView} from './views/ButtonView';
+import {CounterView} from './views/CounterView';
+import {App} from './app';
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = new App();
