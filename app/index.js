@@ -7,9 +7,15 @@ import counter from "./models/CounterModel";
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = new App();
+
+  if (document.getElementById('zoomImage')) {
+    app.addRegions({
+      zoomer: '#zoomImage',
+      addButton: '#buttonView',
+    })
+  }
+
   app.addRegions({
-    zoomer: '#zoomImage',
-    addButton: '#buttonView',
     cartItem: '#counterView',
   });
 
@@ -18,7 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   app.start();
 
-  app.zoomer.show(new ZoomerView());
-  app.addButton.show(new ButtonView());
+  if (document.getElementById('zoomImage')) {
+    app.zoomer.show(new ZoomerView());
+    app.addButton.show(new ButtonView());
+  }
+
   app.cartItem.show(new CounterView());
 });
