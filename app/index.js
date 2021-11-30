@@ -2,6 +2,8 @@ import {ZoomerView} from "./views/ZoomerView";
 import {ButtonView} from "./views/ButtonView";
 import {CounterView} from "./views/CounterView";
 import {App} from "./app";
+import CounterModel from "./models/CounterModel";
+import counter from "./models/CounterModel";
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = new App();

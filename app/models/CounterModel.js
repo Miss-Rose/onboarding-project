@@ -4,8 +4,10 @@ import Radio from "backbone.radio/build/backbone.radio";
 const myChannel = Radio.channel('card');
 
 const CounterModel = Backbone.Model.extend({
-  defaults: {
-    count: 0,
+  defaults: function() {
+    return {
+      count: JSON.parse(window.localStorage.getItem('count')).length
+    };
   },
 });
 
