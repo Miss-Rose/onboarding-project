@@ -17,11 +17,6 @@ export const ButtonView = Marionette.ItemView.extend({
   },
   onButtonClick: function(e) {
     e.preventDefault();
-    let count = JSON.parse(window.localStorage.getItem('count') ? window.localStorage.getItem('count') : '[]');
-    const id = `${window.location.href}`.split('/');
-    count.push(id[id.length - 1]);
-    window.localStorage.setItem('count', JSON.stringify(count));
-    const products = JSON.parse(window.localStorage.getItem('count')).length;
-    myChannel.trigger('save', products);
+    myChannel.trigger('save');
   },
 });
