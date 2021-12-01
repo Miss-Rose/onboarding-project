@@ -26,6 +26,13 @@ app.get('/product/:id', async (req, res) => {
     res.render('productDetail', product);
 });
 
+app.get('/product/add', async (req, res) => {
+    const response = await fetch('http://demo7391349.mockable.io/products');
+    const { data } = await response.json();
+    const product = await data.find(({id}) =>  req.params.id === id);
+    res.render('productDetail', product);
+});
+
 app.listen(port, () => {
     console.log(`Server was started`);
 })
